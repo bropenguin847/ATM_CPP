@@ -6,7 +6,7 @@ using namespace std;
 	float withdraw, transfer, deposit;
 	
 	//for the user;
-	int safety_pin1 = 1971;		//explain to bryant why his 0000 pin sucks ass
+	int safety_pin1 = 1971;		//explain to bryant why his 0000 pin doesn't work
 	string name1 = "Yi Long Mask";
 	int acc_num1 = 3837;
 	float acc_balance1 = 256.00;
