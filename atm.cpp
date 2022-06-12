@@ -36,13 +36,13 @@ void login(){			//login menu
 
 void showMenu(){		//main menu
 	cout<<"\n-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n"
-		<<"Choose what to do\n"
-		<<"Press 1 for Balance Inquiry\n"
-		<<"Press 2 for Money Withdrawal\n"
-		<<"Press 3 for Credit Transfer\n"
-		<<"Press 4 for Money Deposit\n"
-		<<"Press 5 for Touch N Go reload\n"
-		<<"Press 0 to  Quit Program\n"
+		<<"Choose what to do:\n"
+		<<"  Press 1 - Balance Inquiry\n"
+		<<"  Press 2 - Money Withdrawal\n"
+		<<"  Press 3 - Credit Transfer\n"
+		<<"  Press 4 - Money Deposit\n"
+		<<"  Press 5 - Touch N Go reload\n"
+		<<"  Press 0 - Quit Program\n"
 		<<"-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n";;
 }
 
