@@ -187,7 +187,7 @@ void action()			//the looping action of atm
 				}
 				
 				if (reload <= acc_balance){
-					acc_balance = acc_balance - transfer;
+					acc_balance = acc_balance - reload;
 					cout<<"Reload to (Enter Touch 'N Go card number):";
 					cin>>recepient;
 					cout<<"\nCard reload success. The money has been deducted from your account."
