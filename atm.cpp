@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <windows.h>
 using namespace std;
 
 	//declare all the variables here
@@ -7,7 +9,7 @@ using namespace std;
 	string name;
 	
 	//for the users;
-	int safety_pin1 = 1971;		//explain to bryant why his 0000 pin sucks
+	int safety_pin1 = 1971;
 	string name1 = "Yi Long Mask";
 	int acc_num1 = 2203837;
 	float acc_balance1 = 20000.00;
@@ -22,54 +24,98 @@ using namespace std;
 	int acc_num3 = 444;
 	float acc_balance3 = 111111.00;
 
-void login(){			//login menu
+void login()			//login menu
+{
 	cout<<"Please enter your safety pin: ";
-	cin>>safety_pin;
-	if (safety_pin != safety_pin1 and safety_pin != safety_pin2 and safety_pin != safety_pin3){
-		do{
-			cout<<"Wrong pin. Try again\n";
+	while(!(cin >> safety_pin))			//filter out chars
+	{
+		cout <<"This is not integers! Try again!\n";
+		cout<<"Enter pin: ";
+		cin.clear();                                      
+		cin.ignore(123,'\n');
+	}
+	
+	if (safety_pin != safety_pin1 and safety_pin != safety_pin2 and safety_pin != safety_pin3)
+	{
+		do
+		{
+			system("color 0c");		//change the terminal color to red, because it looks cool
+			cout<<"\a";
+			cout<<"Wrong pin. Try again!\n";
 			cout<<"Enter pin: ";
-			cin>>safety_pin;
+			while(!(cin >> safety_pin))			//filter out chars further, trust me, there was a bug here
+			{
+				cout <<"This is not integers! Try again!\n";
+				cout<<"Enter pin: ";
+				cin.clear();                                      
+				cin.ignore(123,'\n');
+			}
 		}while(safety_pin != safety_pin1 and safety_pin != safety_pin2 and safety_pin != safety_pin3);
 	}
 }
 
-void showMenu(){		//main menu
+void showMenu()			//main menu
+{
 	cout<<"\n-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n"
 		<<"Choose what to do:\n"
-		<<"  Press 1 - Balance Inquiry\n"
-		<<"  Press 2 - Money Withdrawal\n"
-		<<"  Press 3 - Credit Transfer\n"
-		<<"  Press 4 - Money Deposit\n"
-		<<"  Press 5 - Touch N Go reload\n"
-		<<"  Press 0 - Quit Program\n"
+		<<"  [1] - Balance Inquiry\n"
+		<<"  [2] - Money Withdrawal\n"
+		<<"  [3] - Credit Transfer\n"
+		<<"  [4] - Money Deposit\n"
+		<<"  [5] - Touch N Go reload\n"
+		<<"  [6] - Clear screen\n"
+		<<"  [0] - Quit Program\n"
 		<<"-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n";;
 }
 
-void action(){			//the looping action of atm
-	do{
+void action()			//the looping action of atm
+{
+
+	cout.setf(ios::fixed);
+	cout.setf(ios::showpoint);
+	cout.precision(2);	
+
+	do
+	{
 		showMenu();
-		cin>>option;	
+		while(!(cin >> option))		//filter out chars
+		{
+			cout <<"This is not integers! Try again!\n";
+			cout<<"Choose what to do:\n";
+			cin.clear();                                      
+			cin.ignore(123,'\n');
+		}
 	
-		switch(option){
-			case 1:			//account inquiry
+		switch(option)
+		{
+			case 1:		//account inquiry
+				system("cls");
 				cout<<"Balance Inquiry:\n"
 					<<"Your name: "<<name
 					<<"\nAccount number: "<<acc_num
-					<<"\nAccount balance: RM"<<acc_balance<<endl;
+					<<"\nAccount balance: RM "<<acc_balance<<endl;
 			break;
 			
-			case 2: 		//withdraw money
+			case 2: 	//withdraw money
 				cout<<"Withdraw:\n"
-					<<"Account balance: RM"<<acc_balance
-					<<"\nWithdraw amount: RM";
-				cin>>withdraw;
+					<<"Account balance: RM "<<acc_balance
+					<<"\nWithdraw amount: RM ";
+					
+				while(!(cin >> withdraw))			//filter out chars
+				{
+					cout <<"This is not integers! Try again!\n";
+					cin.clear();                                      
+					cin.ignore(123,'\n');
+					cout << "\nWithdraw amount: RM ";
+				}
 				
-				if (withdraw <= acc_balance){
+				if (withdraw <= acc_balance)
+				{
 					acc_balance = acc_balance - withdraw;
 						cout<<"\nMoney withdrawal success. The money has been deducted from your account."
 							<<"\nYour current account balance is: "<<acc_balance<<endl;
-						if (acc_balance == 0){
+						if (acc_balance == 0)
+						{
 							cout<<"You have no money now!!";
 						}
 				}
@@ -78,19 +124,28 @@ void action(){			//the looping action of atm
 				}
 			break;
 	
-			case 3: 		//transfer credit
+			case 3: 	//transfer credit
 				cout<<"Transfer:\n"
-					<<"Account balance: RM"<<acc_balance
-					<<"\nTransfer amount: RM";
-				cin>>transfer;
+					<<"Account balance: RM "<<acc_balance
+					<<"\nTransfer amount: RM ";
+					
+				while(!(cin >> transfer))			//filter out chars
+				{
+					cout <<"This is not integers! Try again!\n";
+					cin.clear();                                      
+					cin.ignore(123,'\n');
+					cout << "\nTransfer amount: RM ";
+				}
 				
-				if (transfer <= acc_balance){
+				if (transfer <= acc_balance)
+				{
 					acc_balance = acc_balance - transfer;
 					cout<<"Transfer to (Enter recipient account number):";
-					cin>>recepient;		//this is for when we want to add 3 users
+					cin>>recepient;
 					cout<<"\nMoney transfer success. The money has been deducted from your account."
 						<<"\nYour current account balance is: "<<acc_balance<<endl;
-						if (acc_balance == 0){
+						if (acc_balance == 0)
+						{
 							cout<<"You have no money now!!";
 						}
 				}
@@ -102,9 +157,17 @@ void action(){			//the looping action of atm
 			
 			case 4:		//deposit
 				cout<<"Deposit:\n"
-					<<"Account balance: RM"<<acc_balance
-					<<"\nDeposit amount: RM";
-				cin>>deposit;
+					<<"Account balance: RM "<<acc_balance
+					<<"\nDeposit amount: RM ";
+					
+				while(!(cin >> deposit))			//filter out chars
+				{
+					cout <<"This is not integers! Try again!\n";
+					cin.clear();                                      
+					cin.ignore(123,'\n');
+					cout << "\nDeposit amount: RM ";
+				}
+				
 				acc_balance = acc_balance + deposit;
 				cout<<"\nMoney deposit success. The money has been deposited to your account."
 					<<"\nYour current account balance is: "<<acc_balance<<endl;
@@ -112,9 +175,16 @@ void action(){			//the looping action of atm
 			
 			case 5:		//reload TnG card
 				cout<<"Reload Touch 'N Go card:\n"
-					<<"Account balance: RM"<<acc_balance
-					<<"\nReload Value: RM";
-				cin>>reload;
+					<<"Account balance: RM "<<acc_balance
+					<<"\nReload Value: RM ";
+					
+				while(!(cin >> reload))			//filter out chars
+				{
+					cout <<"This is not integers! Try again!\n";
+					cin.clear();                                      
+					cin.ignore(123,'\n');
+					cout << "\nReload Value: RM ";
+				}
 				
 				if (reload <= acc_balance){
 					acc_balance = acc_balance - transfer;
@@ -131,6 +201,10 @@ void action(){			//the looping action of atm
 					cout<<"The transfer amount is too much! Not enough in account balance!";
 				}
 			break;
+			
+			case 6:		//clear screen
+				system("cls");
+			break;
 
 			case 0:
 				cout<<"Thank you for using this program!";
@@ -140,14 +214,18 @@ void action(){			//the looping action of atm
 				cout<<"Sorry, this action cannot be done. Please try again.";
 			break;
 		}
-	}while(option!=0);
+	}while(option != 0);
 }
 
 int main(){
+	system("color 0e");		//change the color of the terminal to yellow
 	cout<<"-~-~-~-~-~-~-~-~-~-~-~-~-~-~-Welcome-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n\n";
 	login();
 	
-	if(safety_pin == safety_pin1){
+	system("cls");
+	system("color 03");
+	
+	if(safety_pin == safety_pin1){			//user 1 menu
 		name = name1;
 		acc_num = acc_num1;
 		acc_balance = acc_balance1;
@@ -160,7 +238,7 @@ int main(){
 		}while(option != 0);
 	}
 	
-	else if(safety_pin == safety_pin2){
+	else if(safety_pin == safety_pin2){		//user 2 menu
 		name = name2;
 		acc_num = acc_num2;
 		acc_balance = acc_balance2;
@@ -173,7 +251,7 @@ int main(){
 		}while(option != 0);
 	}
 	
-	else if(safety_pin == safety_pin3){
+	else if(safety_pin == safety_pin3){		//user 3 menu
 		name = name3;
 		acc_num = acc_num3;
 		acc_balance = acc_balance3;
