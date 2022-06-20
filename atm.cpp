@@ -113,7 +113,7 @@ void action()			//the looping action of atm
 				{
 					acc_balance = acc_balance - withdraw;
 						cout<<"\nMoney withdrawal success. The money has been deducted from your account."
-							<<"\nYour current account balance is: "<<acc_balance<<endl;
+							<<"\nYour current account balance is: RM "<<acc_balance<<endl;
 						if (acc_balance == 0)
 						{
 							cout<<"You have no money now!!";
@@ -143,7 +143,7 @@ void action()			//the looping action of atm
 					cout<<"Transfer to (Enter recipient account number):";
 					cin>>recepient;
 					cout<<"\nMoney transfer success. The money has been deducted from your account."
-						<<"\nYour current account balance is: "<<acc_balance<<endl;
+						<<"\nYour current account balance is: RM "<<acc_balance<<endl;
 						if (acc_balance == 0)
 						{
 							cout<<"You have no money now!!";
@@ -170,7 +170,7 @@ void action()			//the looping action of atm
 				
 				acc_balance = acc_balance + deposit;
 				cout<<"\nMoney deposit success. The money has been deposited to your account."
-					<<"\nYour current account balance is: "<<acc_balance<<endl;
+					<<"\nYour current account balance is: RM "<<acc_balance<<endl;
 			break;
 			
 			case 5:		//reload TnG card
@@ -191,7 +191,7 @@ void action()			//the looping action of atm
 					cout<<"Reload to (Enter Touch 'N Go card number):";
 					cin>>recepient;
 					cout<<"\nCard reload success. The money has been deducted from your account."
-						<<"\nYour current account balance is: "<<acc_balance<<endl;
+						<<"\nYour current account balance is: RM "<<acc_balance<<endl;
 						if (acc_balance == 0){
 							cout<<"You have no money now!!";
 						}
@@ -207,7 +207,8 @@ void action()			//the looping action of atm
 			break;
 
 			case 0:
-				cout<<"Thank you for using this program!";
+				cout<<"Thank you for using this program!"<<endl;
+				system("pause");
 			break;
 			
 			default:
