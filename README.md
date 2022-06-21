@@ -10,11 +10,23 @@ The welcome and login screen
 ![welcome screen](https://user-images.githubusercontent.com/106984547/174469970-2e63015c-f87d-4973-bfbd-0f88614aa2c3.png)
 
 -----------------------------------------------------------------------
-User screen
+User 1
 
-![user screen](https://user-images.githubusercontent.com/106984547/174469978-14e5f0fc-18e3-4154-b5d0-1d7a5b80e998.png)
+![user 1](https://user-images.githubusercontent.com/106984547/174758026-d2732e6b-2ec3-493f-b39d-504dd21e56b4.png)
 
 -----------------------------------------------------------------------
+User 2
+
+![user 2](https://user-images.githubusercontent.com/106984547/174758084-fc8ccd4e-d439-4a29-8fcf-86b716ff91f3.png)
+-----------------------------------------------------------------------
+
+User 3
+
+![user 3](https://user-images.githubusercontent.com/106984547/174758391-d4e95761-587f-4a6c-8bf5-e4783b4c82c9.png)
+
+-----------------------------------------------------------------------
+Menu system:
+
 Option 1:
 
 ![1  balance inquiry](https://user-images.githubusercontent.com/106984547/174481216-7ec1df55-cba1-491e-be72-8586f70783f2.png)
@@ -22,23 +34,23 @@ Option 1:
 -----------------------------------------------------------------------
 Option 2:
 
-![2  withdraw](https://user-images.githubusercontent.com/106984547/174481231-c84f0b72-03be-407d-9081-6005ad4bddf3.png)
+![2  withdraw](https://user-images.githubusercontent.com/106984547/174757661-9c52905d-0cbd-42f3-9fee-a05e2ce38464.png)
 
 -----------------------------------------------------------------------
 Option 3:
 
-![3  transfer](https://user-images.githubusercontent.com/106984547/174481238-8e3e5ee7-e7c4-406a-a0bb-d4d80e7bbada.png)
+![3  transfer](https://user-images.githubusercontent.com/106984547/174757729-79ecf3d1-046f-488c-8783-234c80ac587c.png)
 
 -----------------------------------------------------------------------
 
 Option 4:
 
-![4  deposit](https://user-images.githubusercontent.com/106984547/174481255-67449c23-9f95-4bcd-9960-fdf477e44231.png)
+![4  deposit](https://user-images.githubusercontent.com/106984547/174757872-3ecfa928-0e92-482b-8005-799b0ca5d67b.png)
 
 -----------------------------------------------------------------------
 Option 5:
 
-![5  reload tng](https://user-images.githubusercontent.com/106984547/174481280-ff75d933-b2fe-4adc-901b-c4001cb7c83c.png)
+![5  reload tng](https://user-images.githubusercontent.com/106984547/174757897-7779ee61-b00c-4e57-97ed-0bc126352ab3.png)
 
 -----------------------------------------------------------------------
 Thank you screen
