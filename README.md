@@ -58,4 +58,3 @@ Thank you screen
 ![thank you screen](https://user-images.githubusercontent.com/106984547/174469987-fbe8d79b-7894-42c4-88d3-84659edd6046.png)
 
 the rest of the screenshot isn't uploaded yet because I'm lazy.
-will upload soon...
