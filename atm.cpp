@@ -220,7 +220,8 @@ void action()			//the looping action of atm
 
 int main(){
 	system("color 0e");		//change the color of the terminal to yellow
-	cout<<"-~-~-~-~-~-~-~-~-~-~-~-~-~-~-Welcome-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n\n";
+	cout<<"-~-~-~-~-~-~-~-~-~-~-~-~-~-~-Welcome-~-~-~-~-~-~-~-~-~-~-~-~-~-~-\n";
+	cout<<"---------------------------created by BP-------------------------\n";
 	login();
 	
 	system("cls");
