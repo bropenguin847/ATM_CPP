@@ -1,9 +1,9 @@
-# atm_cpp
+# ATM C++
 made by BP
 
 This is the c++ code for an ATM project.
 This atm is only one time use, meaning any changing data aren't able to be saved somewhere.
-However, there is three users that can use this atm.
+Three users can use this atm at once.
 Bryant is another member of the team.
 
 It does the following:
