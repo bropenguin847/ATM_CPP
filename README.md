@@ -1,8 +1,8 @@
 # ATM C++
-made by BP
+Developed by: Keith Lim
 
-This is the c++ code for an ATM project.
-This atm is only one time use, meaning any changing data aren't able to be saved somewhere.
+This is the C++ code for an ATM project.
+V1 atm is only one time use, meaning any changing data aren't able to be saved somewhere.
 Three users can use this atm at once.
 Bryant is another member of the team.
 
@@ -13,6 +13,8 @@ It does the following:
 * deposit
 * reload tng card
 * clear screen
+
+V2 atm system is currently being developed.... Stay tuned...
 
 The welcome and login screen
 
@@ -61,9 +63,8 @@ Option 5:
 
 ![5  reload tng](https://user-images.githubusercontent.com/106984547/174757897-7779ee61-b00c-4e57-97ed-0bc126352ab3.png)
 
------------------------------------------------------------------------
+---
 Thank you screen
 
 ![thank you screen](https://user-images.githubusercontent.com/106984547/174469987-fbe8d79b-7894-42c4-88d3-84659edd6046.png)
 
-the rest of the screenshot isn't uploaded yet because I'm lazy.
